@@ -14,7 +14,10 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://newsapi.org/v2/everything?q=afghanistan&apiKey=598a19e833ba43f8b7f1f8a6533aefcf`)
+      .get(`https://newsapi.org/v2/everything?q=afghanistan&apiKey=598a19e833ba43f8b7f1f8a6533aefcf`,{
+        'Connection': 'Upgrade',
+        'Upgrade': 'h2c'
+    })
       .then((data) => setData(data.data));
   }, []);
   return (
