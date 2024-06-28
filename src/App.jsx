@@ -10,12 +10,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function App() {
-  const API_KEY = "598a19e833ba43f8b7f1f8a6533aefcf";
   const [data, setData] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`https://newsapi.org/v2/everything?q=afghanistan&apiKey=${API_KEY}`)
+      .get(`https://newsapi.org/v2/everything?q=afghanistan&apiKey=598a19e833ba43f8b7f1f8a6533aefcf`)
       .then((data) => setData(data.data));
   }, []);
   return (
